@@ -1,5 +1,7 @@
 /// <reference path="MusicKit.Player.d.ts" />
-
+/// <reference path="MusicKit.MediaItem.d.ts" />
+/// <reference path="MusicKit.MKError.d.ts" />
+/// <reference path="MusicKit.MusicKitInstance.d.ts" />
 /**
  * Use the MusicKit namespace to configure MusicKit JS and to access app
  * instances, control music playback, and fetch data from the Apple Music API.

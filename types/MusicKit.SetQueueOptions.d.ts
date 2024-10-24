@@ -1,3 +1,4 @@
+/// <reference path="MusicKit.API.d.ts" />
 declare namespace MusicKit {
     /**
      * The options to use when setting a music player's playback queue.

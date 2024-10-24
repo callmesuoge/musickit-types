@@ -1,3 +1,5 @@
+/// <reference path="MusicKit.Queue.d.ts" />
+
 declare namespace MusicKit {
   /**
    * The playback states of the music player.

@@ -1,3 +1,8 @@
+
+/// <reference path="MusicKit.d.ts" />
+/// <reference path="MusicKit.MediaItem.d.ts" />
+/// <reference path="MusicKit.Library.d.ts" />
+
 declare namespace MusicKit {
   /**
    * An object that represents a unique identifier for a music item.
@@ -97,7 +102,7 @@ declare namespace MusicKit {
    */
   interface Storefronts extends Resource {
     type: "storefronts";
-    attributes?: {
+    attributes: {
       defaultLanguageTag: string;
       explicitContentPolicy: "allowed" | "opt-in" | "prohibited";
       name: string;
@@ -111,7 +116,7 @@ declare namespace MusicKit {
    */
   interface Genres extends Resource {
     type: "genres";
-    attributes?: {
+    attributes: {
       name: string;
       parentId?: string;
       parentName?: string;
@@ -343,7 +348,7 @@ declare namespace MusicKit {
    */
   interface LibraryAlbums extends Resource {
     type: "library-albums";
-    attributes?: {
+    attributes: {
       artistName: string;
       artwork: Artwork;
       contentRating?: ContentRating;
@@ -1012,12 +1017,6 @@ declare namespace MusicKit {
   interface v3 {
     // music<T extends keyof v3MusicRoutes>(route: T, parameters?: QueryParameters, options?: QueryOptions): Promise<QueryResponse<v3MusicRoutes[T]>>;
 
-    music<T extends keyof v3MusicRoutes>(
-      route: T | string,
-      parameters?: QueryParameters,
-      options?: QueryOptions
-    ): Promise<QueryResponse<v3MusicRoutes[T] | any>>;
-
     podcasts<T extends keyof v3PodcastRoutes>(
       route: T | string,
       parameters?: QueryParameters,
@@ -1033,6 +1032,12 @@ declare namespace MusicKit {
      * Search for resources, using the v3 REST API.
      */
     v3: v3;
+
+    music<T extends keyof v3MusicRoutes>(
+      route: T | string,
+      parameters?: QueryParameters,
+      options?: QueryOptions
+    ): Promise<QueryResponse<v3MusicRoutes[T] | any>>;
 
     /**
      * An instance of the Cloud library.
