@@ -87,11 +87,8 @@ declare namespace MusicKit {
     id: string;
     type: string;
     href: string;
-    attributes: Record<string, any>;
-    relationships?: Record<
-      string,
-      Relationship<Resource> | Array<Relationship<Resource>>
-    >;
+    attributes?: Record<string, any>;
+    relationships?: Record<string, any>;
     meta?: Record<string, any>;
     views?: Record<string, View<Resource>>;
   }
