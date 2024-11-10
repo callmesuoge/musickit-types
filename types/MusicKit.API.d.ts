@@ -407,6 +407,7 @@ declare namespace MusicKit {
       composers?: Relationship<Artists>;
       library?: Relationship<LibraryAlbums>;
       "music-videos"?: Relationship<MusicVideos>;
+      catalog?: Relationship<Songs>;
     };
   }
 
